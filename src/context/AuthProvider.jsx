@@ -15,7 +15,8 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    api.get("/account/me")
+    api
+      .get("/api/account/me")
       .then(() => setIsLoggedIn(true))
       .catch(() => setIsLoggedIn(false))
       .finally(() => setLoading(false));

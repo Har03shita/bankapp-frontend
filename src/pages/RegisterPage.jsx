@@ -16,7 +16,7 @@ const RegisterPage = () => {
     setSuccess("");
 
     try {
-      await api.post("/auth/register", { username, password });
+      await api.post("/api/auth/register", { username, password });
       setSuccess("Registration successful! Redirecting to login...");
 
       setTimeout(() => navigate("/login"), 1500);
