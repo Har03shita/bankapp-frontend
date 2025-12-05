@@ -16,7 +16,7 @@ const LoginPage = () => {
     setError("");
 
     try {
-      const res = await api.post("/api/auth/login", { username, password });
+      const res = await api.post("/auth/login", { username, password });
 
       login();
       navigate("/dashboard");
